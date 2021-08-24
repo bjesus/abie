@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+  data-abie-group-a-lte="15"
+  data-abie-group-b-gt="15"
+  data-abie-group-b-lte="30"
+>
+  <head>
+    <link rel="icon" href="data:image/svg+xml,%3csvg%3e %3c/svg%3e" />
+    <title>Testing page</title>
+    <script>
+      console.log("%ABIE_IDENTIFIER%");
+    </script>
+  </head>
+  <body>
+    <h1>Example page</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+
+    <p data-abie-gte="90">
+      This paragraph will only show to 10% of the users, between 90 to 100.
+    </p>
+
+    <button data-abie-group-a style="background-color: pink">
+      Pink button
+    </button>
+    <button data-abie-group-b style="background-color: yellow">
+      Yellow button
+    </button>
+    <button data-abie-gt="30">Normal button</button>
+  </body>
+</html>
