@@ -60,28 +60,28 @@ class AbieFilter {
         if (this.groups[group]) {
           if (
             this.groups[group]["lt"] &&
-            this.userIdentifier > parseInt(this.groups[group]["lt"])
+            this.userIdentifier >= parseInt(this.groups[group]["lt"])
           ) {
             element.remove();
           }
 
           if (
             this.groups[group]["lte"] &&
-            this.userIdentifier >= parseInt(this.groups[group]["lte"])
+            this.userIdentifier > parseInt(this.groups[group]["lte"])
           ) {
             element.remove();
           }
 
           if (
             this.groups[group]["gt"] &&
-            this.userIdentifier < parseInt(this.groups[group]["gt"])
+            this.userIdentifier <= parseInt(this.groups[group]["gt"])
           ) {
             element.remove();
           }
 
           if (
             this.groups[group]["gte"] &&
-            this.userIdentifier <= parseInt(this.groups[group]["gte"])
+            this.userIdentifier < parseInt(this.groups[group]["gte"])
           ) {
             element.remove();
           }
