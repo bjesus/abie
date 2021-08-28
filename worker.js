@@ -35,7 +35,7 @@ class GroupSetterRewriter {
     this.groups = groups;
   }
   element(element) {
-    for (const [attr, value] of element.attributes) {
+    for (const [attr, value] of [...element.attributes]) {
       if (attr.startsWith("data-abie-group-")) {
         const [_x, _y, _z, group, operator] = attr.split("-");
         if (!(group in this.groups)) {
@@ -54,7 +54,7 @@ class AbieFilter {
     this.groups = groups;
   }
   element(element) {
-    for (const [attr, value] of element.attributes) {
+    for (const [attr, value] of [...element.attributes]) {
       if (attr.startsWith("data-abie-group-")) {
         const group = attr.substring("data-abie-group-".length);
         if (this.groups[group]) {
